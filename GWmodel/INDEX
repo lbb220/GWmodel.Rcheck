@@ -1,0 +1,92 @@
+DubVoter                Voter turnout data in Greater
+                        Dublin(SpatialPolygonsDataFrame)
+EWHP                    House price data set (DataFrame) in England and
+                        Wales
+GWmodel-package         Geographically-Weighted Models
+Gedu.counties           Georgia counties data
+                        (SpatialPolygonsDataFrame)
+Georgia                 Georgia census data set (csv file)
+LondonBorough           London boroughs data
+LondonHP                London house price data set
+                        (SpatialPointsDataFrame)
+USelect2004             Results of the 2004 US presidential election at
+                        the county level (SpatialPolygonsDataFrame)
+bw.ggwr                 Bandwidth selection for generalised
+                        geographically weighted regression (GWR)
+bw.gtwr                 Bandwidth selection for GTWR
+bw.gwda                 Bandwidth selection for GW Discriminant
+                        Analysis
+bw.gwpca                Bandwidth selection for Geographically Weighted
+                        Principal Components Analysis (GWPCA)
+bw.gwr                  Bandwidth selection for basic GWR
+bw.gwr.lcr              Bandwidth selection for locally compensated
+                        ridge GWR (GWR-LCR)
+bw.gwss.average         Bandwidth selection for GW summary averages
+cty_eng                 England county boundaries
+ewoutline               Outline of England and Wales for data EWHP
+ge2015                  General Election outcome data at constituency
+                        level in England
+ggwr.basic              Generalised GWR models with Poisson and
+                        Binomial options
+ggwr.cv                 Cross-validation score for a specified
+                        bandwidth for generalised GWR
+ggwr.cv.contrib         Cross-validation data at each observation
+                        location for a generalised GWR model
+gtwr                    Geographically and Temporally Weighted
+                        Regression
+gw.dist                 Distance matrix calculation
+gw.pcplot               Geographically weighted parallel coordinate
+                        plot for investigating multivariate data sets
+gw.weight               Weight matrix calculation
+gwda                    GW Discriminant Analysis
+gwpca                   GWPCA
+gwpca.check.components
+                        Interaction tool with the GWPCA glyph map
+gwpca.cv                Cross-validation score for a specified
+                        bandwidth for GWPCA
+gwpca.cv.contrib        Cross-validation data at each observation
+                        location for a GWPCA
+gwpca.glyph.plot        Multivariate glyph plots of GWPCA loadings
+gwpca.montecarlo.1      Monte Carlo (randomisation) test for
+                        significance of GWPCA eigenvalue variability
+                        for the first component only - option 1
+gwpca.montecarlo.2      Monte Carlo (randomisation) test for
+                        significance of GWPCA eigenvalue variability
+                        for the first component only - option 2
+gwr.basic               Basic GWR model
+gwr.bootstrap           Bootstrap GWR
+gwr.collin.diagno       Local collinearity diagnostics for basic GWR
+gwr.cv                  Cross-validation score for a specified
+                        bandwidth for basic GWR
+gwr.cv.contrib          Cross-validation data at each observation
+                        location for a basic GWR model
+gwr.hetero              Heteroskedastic GWR
+gwr.lcr                 GWR with a locally-compensated ridge term
+gwr.lcr.cv              Cross-validation score for a specified
+                        bandwidth for GWR-LCR model
+gwr.lcr.cv.contrib      Cross-validation data at each observation
+                        location for the GWR-LCR model
+gwr.mink.approach       Minkovski approach for GWR
+gwr.mink.matrixview     Visualisation of the results from
+                        'gwr.mink.approach'
+gwr.mink.pval           Select the values of p for the Minkowski
+                        approach for GWR
+gwr.mixed               Mixed GWR
+gwr.model.selection     Model selection for GWR with a given set of
+                        independent variables
+gwr.model.sort          Sort the results of the GWR model selection
+                        function 'gwr.model.selection'.
+gwr.model.view          Visualise the GWR models from
+                        'gwr.model.selection'
+gwr.montecarlo          Monte Carlo (randomisation) test for
+                        significance of GWR parameter variability
+gwr.multiscale          Multiscale GWR
+gwr.predict             GWR used as a spatial predictor
+gwr.robust              Robust GWR model
+gwr.scalable            Scalable GWR
+gwr.t.adjust            Adjust p-values for multiple hypothesis tests
+                        in basic GWR
+gwr.write               Write the GWR results into files
+gwss                    Geographically weighted summary statistics
+                        (GWSS)
+gwss.montecarlo         Monte Carlo (randomisation) test for gwss

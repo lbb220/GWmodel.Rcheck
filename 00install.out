@@ -1,0 +1,34 @@
+* installing *source* package 'GWmodel' ...
+** libs
+
+*** arch - i386
+c:/Rtools/mingw_32/bin/g++  -I"C:/PROGRA~1/R/R-33~1.2/include" -DNDEBUG -ID:/LIB_GSL/include -I../inst/include   -I"C:/Program Files/R/R-3.3.2/library/Rcpp/include" -I"C:/Program Files/R/R-3.3.2/library/RcppArmadillo/include" -I"d:/Compiler/gcc-4.9.3/local330/include"     -O2 -Wall  -mtune=core2 -c GWmodel.cpp -o GWmodel.o
+c:/Rtools/mingw_32/bin/g++  -I"C:/PROGRA~1/R/R-33~1.2/include" -DNDEBUG -ID:/LIB_GSL/include -I../inst/include   -I"C:/Program Files/R/R-3.3.2/library/Rcpp/include" -I"C:/Program Files/R/R-3.3.2/library/RcppArmadillo/include" -I"d:/Compiler/gcc-4.9.3/local330/include"     -O2 -Wall  -mtune=core2 -c RcppExports.cpp -o RcppExports.o
+c:/Rtools/mingw_32/bin/gcc  -I"C:/PROGRA~1/R/R-33~1.2/include" -DNDEBUG -ID:/LIB_GSL/include -I../inst/include   -I"C:/Program Files/R/R-3.3.2/library/Rcpp/include" -I"C:/Program Files/R/R-3.3.2/library/RcppArmadillo/include" -I"d:/Compiler/gcc-4.9.3/local330/include"     -O3 -Wall  -std=gnu99 -mtune=core2 -c init.c -o init.o
+c:/Rtools/mingw_32/bin/g++ -shared -s -static-libgcc -o GWmodel.dll tmp.def GWmodel.o RcppExports.o init.o -LC:/PROGRA~1/R/R-33~1.2/bin/i386 -lRlapack -LC:/PROGRA~1/R/R-33~1.2/bin/i386 -lRblas -lgfortran -lm -lquadmath -Ld:/Compiler/gcc-4.9.3/local330/lib/i386 -Ld:/Compiler/gcc-4.9.3/local330/lib -LC:/PROGRA~1/R/R-33~1.2/bin/i386 -lR
+installing to C:/GWmodel.Rcheck/GWmodel/libs/i386
+
+*** arch - x64
+c:/Rtools/mingw_64/bin/g++  -I"C:/PROGRA~1/R/R-33~1.2/include" -DNDEBUG -ID:/LIB_GSL/include -I../inst/include   -I"C:/Program Files/R/R-3.3.2/library/Rcpp/include" -I"C:/Program Files/R/R-3.3.2/library/RcppArmadillo/include" -I"d:/Compiler/gcc-4.9.3/local330/include"     -O2 -Wall  -mtune=core2 -c GWmodel.cpp -o GWmodel.o
+c:/Rtools/mingw_64/bin/g++  -I"C:/PROGRA~1/R/R-33~1.2/include" -DNDEBUG -ID:/LIB_GSL/include -I../inst/include   -I"C:/Program Files/R/R-3.3.2/library/Rcpp/include" -I"C:/Program Files/R/R-3.3.2/library/RcppArmadillo/include" -I"d:/Compiler/gcc-4.9.3/local330/include"     -O2 -Wall  -mtune=core2 -c RcppExports.cpp -o RcppExports.o
+c:/Rtools/mingw_64/bin/gcc  -I"C:/PROGRA~1/R/R-33~1.2/include" -DNDEBUG -ID:/LIB_GSL/include -I../inst/include   -I"C:/Program Files/R/R-3.3.2/library/Rcpp/include" -I"C:/Program Files/R/R-3.3.2/library/RcppArmadillo/include" -I"d:/Compiler/gcc-4.9.3/local330/include"     -O2 -Wall  -std=gnu99 -mtune=core2 -c init.c -o init.o
+c:/Rtools/mingw_64/bin/g++ -shared -s -static-libgcc -o GWmodel.dll tmp.def GWmodel.o RcppExports.o init.o -LC:/PROGRA~1/R/R-33~1.2/bin/x64 -lRlapack -LC:/PROGRA~1/R/R-33~1.2/bin/x64 -lRblas -lgfortran -lm -lquadmath -Ld:/Compiler/gcc-4.9.3/local330/lib/x64 -Ld:/Compiler/gcc-4.9.3/local330/lib -LC:/PROGRA~1/R/R-33~1.2/bin/x64 -lR
+C:\Rtools\mingw_32\bin\nm.exe: C:/GWmodel.Rcheck/00_pkg_src/GWmodel/src-x64/GWmodel.o: File format not recognized
+C:\Rtools\mingw_32\bin\nm.exe: C:/GWmodel.Rcheck/00_pkg_src/GWmodel/src-x64/RcppExports.o: File format not recognized
+C:\Rtools\mingw_32\bin\nm.exe: C:/GWmodel.Rcheck/00_pkg_src/GWmodel/src-x64/init.o: File format not recognized
+Warning messages:
+1: 运行命令'"C:\Rtools\mingw_32\bin\nm.exe" -Pg "C:/GWmodel.Rcheck/00_pkg_src/GWmodel/src-x64/GWmodel.o"'的状态是1 
+2: 运行命令'"C:\Rtools\mingw_32\bin\nm.exe" -Pg "C:/GWmodel.Rcheck/00_pkg_src/GWmodel/src-x64/RcppExports.o"'的状态是1 
+3: 运行命令'"C:\Rtools\mingw_32\bin\nm.exe" -Pg "C:/GWmodel.Rcheck/00_pkg_src/GWmodel/src-x64/init.o"'的状态是1 
+installing to C:/GWmodel.Rcheck/GWmodel/libs/x64
+** R
+** data
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+*** arch - i386
+*** arch - x64
+* DONE (GWmodel)
