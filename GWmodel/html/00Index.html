@@ -11,7 +11,7 @@
 <div style="text-align: center;">
 <a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]" /></a>
 <a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]" /></a>
-</div><h2>Documentation for package &lsquo;GWmodel&rsquo; version 2.1-4</h2>
+</div><h2>Documentation for package &lsquo;GWmodel&rsquo; version 2.2-3</h2>
 
 <ul><li><a href="../DESCRIPTION">DESCRIPTION file</a>.</li>
 </ul>
@@ -52,6 +52,8 @@
 <td>Scalable GWR</td></tr>
 <tr><td style="width: 25%;"><a href="gwr.model.selection.html">AICc_rss</a></td>
 <td>Model selection for GWR with a given set of independent variables</td></tr>
+<tr><td style="width: 25%;"><a href="bw.gwr.html">AICc_rss1</a></td>
+<td>Bandwidth selection for basic GWR</td></tr>
 </table>
 
 <h2><a name="B">-- B --</a></h2>
@@ -59,10 +61,8 @@
 <table width="100%">
 <tr><td style="width: 25%;"><a href="gwr.bootstrap.html">bias.bs</a></td>
 <td>Bootstrap GWR</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">bisq_wt_mat</a></td>
-<td>Weight matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">bisq_wt_vec</a></td>
-<td>Weight matrix calculation</td></tr>
+<tr><td style="width: 25%;"><a href="bw.gwr.html">BIC</a></td>
+<td>Bandwidth selection for basic GWR</td></tr>
 <tr><td style="width: 25%;"><a href="bw.ggwr.html">bw.ggwr</a></td>
 <td>Bandwidth selection for generalised geographically weighted regression (GWR)</td></tr>
 <tr><td style="width: 25%;"><a href="bw.gtwr.html">bw.gtwr</a></td>
@@ -86,12 +86,6 @@
 <h2><a name="C">-- C --</a></h2>
 
 <table width="100%">
-<tr><td style="width: 25%;"><a href="gw.dist.html">cd_dist_mat</a></td>
-<td>Distance matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.dist.html">cd_dist_smat</a></td>
-<td>Distance matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.dist.html">cd_dist_vec</a></td>
-<td>Distance matrix calculation</td></tr>
 <tr><td style="width: 25%;"><a href="gwpca.check.components.html">check.components</a></td>
 <td>Interaction tool with the GWPCA glyph map</td></tr>
 <tr><td style="width: 25%;"><a href="gwr.bootstrap.html">ci.bs</a></td>
@@ -100,10 +94,6 @@
 <td>Basic GWR model</td></tr>
 <tr><td style="width: 25%;"><a href="gwda.html">confusion.matrix</a></td>
 <td>GW Discriminant Analysis</td></tr>
-<tr><td style="width: 25%;"><a href="gw.dist.html">coordinate_rotate</a></td>
-<td>Distance matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="EN_CB.html">cty_eng</a></td>
-<td>England county boundaries</td></tr>
 </table>
 
 <h2><a name="D">-- D --</a></h2>
@@ -120,24 +110,16 @@
 <table width="100%">
 <tr><td style="width: 25%;"><a href="gwr.model.selection.html">ehat</a></td>
 <td>Model selection for GWR with a given set of independent variables</td></tr>
-<tr><td style="width: 25%;"><a href="gw.dist.html">eu_dist_mat</a></td>
-<td>Distance matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.dist.html">eu_dist_smat</a></td>
-<td>Distance matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.dist.html">eu_dist_vec</a></td>
-<td>Distance matrix calculation</td></tr>
 <tr><td style="width: 25%;"><a href="EWHP.html">EWHP</a></td>
 <td>House price data set (DataFrame) in England and Wales</td></tr>
 <tr><td style="width: 25%;"><a href="EWHP.html">ewhp</a></td>
 <td>House price data set (DataFrame) in England and Wales</td></tr>
 <tr><td style="width: 25%;"><a href="EWOutline.html">ewoutline</a></td>
 <td>Outline of England and Wales for data EWHP</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">exp_wt_mat</a></td>
-<td>Weight matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">exp_wt_vec</a></td>
-<td>Weight matrix calculation</td></tr>
 <tr><td style="width: 25%;"><a href="gwr.model.selection.html">extract.mat</a></td>
 <td>Model selection for GWR with a given set of independent variables</td></tr>
+<tr><td style="width: 25%;"><a href="bw.gwr.html">e_vec</a></td>
+<td>Bandwidth selection for basic GWR</td></tr>
 </table>
 
 <h2><a name="F">-- F --</a></h2>
@@ -145,17 +127,13 @@
 <table width="100%">
 <tr><td style="width: 25%;"><a href="gwr.basic.html">F1234.test</a></td>
 <td>Basic GWR model</td></tr>
+<tr><td style="width: 25%;"><a href="bw.gwr.html">fitted</a></td>
+<td>Bandwidth selection for basic GWR</td></tr>
 </table>
 
 <h2><a name="G">-- G --</a></h2>
 
 <table width="100%">
-<tr><td style="width: 25%;"><a href="gw.weight.html">gauss_wt_mat</a></td>
-<td>Weight matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">gauss_wt_vec</a></td>
-<td>Weight matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="GE2015.html">ge2015</a></td>
-<td>General Election outcome data at constituency level in England</td></tr>
 <tr><td style="width: 25%;"><a href="GeorgiaCounties.html">Gedu.counties</a></td>
 <td>Georgia counties data (SpatialPolygonsDataFrame)</td></tr>
 <tr><td style="width: 25%;"><a href="Georgia.html">Gedu.df</a></td>
@@ -209,22 +187,6 @@
 <tr><td style="width: 25%;"><a href="gwr.predict.html">gw.reg1</a></td>
 <td>GWR used as a spatial predictor</td></tr>
 <tr><td style="width: 25%;"><a href="gw.weight.html">gw.weight</a></td>
-<td>Weight matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">gw.weight.bis</a></td>
-<td>Weight matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">gw.weight.bis.ad</a></td>
-<td>Weight matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">gw.weight.box</a></td>
-<td>Weight matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">gw.weight.box.ad</a></td>
-<td>Weight matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">gw.weight.gau</a></td>
-<td>Weight matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">gw.weight.gau.ad</a></td>
-<td>Weight matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">gw.weight.tri</a></td>
-<td>Weight matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">gw.weight.tri.ad</a></td>
 <td>Weight matrix calculation</td></tr>
 <tr><td style="width: 25%;"><a href="gwda.html">gwda</a></td>
 <td>GW Discriminant Analysis</td></tr>
@@ -292,7 +254,11 @@
 <td>Mixed GWR</td></tr>
 <tr><td style="width: 25%;"><a href="gwr.mixed.html">gwr.mixed.2</a></td>
 <td>Mixed GWR</td></tr>
+<tr><td style="width: 25%;"><a href="gwr.mixed.html">gwr.mixed.2.fast</a></td>
+<td>Mixed GWR</td></tr>
 <tr><td style="width: 25%;"><a href="gwr.mixed.html">gwr.mixed.trace</a></td>
+<td>Mixed GWR</td></tr>
+<tr><td style="width: 25%;"><a href="gwr.mixed.html">gwr.mixed.trace.fast</a></td>
 <td>Mixed GWR</td></tr>
 <tr><td style="width: 25%;"><a href="gwr.model.selection.html">gwr.model.selection</a></td>
 <td>Model selection for GWR with a given set of independent variables</td></tr>
@@ -340,12 +306,44 @@
 <td>Basic GWR model</td></tr>
 <tr><td style="width: 25%;"><a href="gwr.scalable.html">gwr_diag1</a></td>
 <td>Scalable GWR</td></tr>
+<tr><td style="width: 25%;"><a href="gwr.mixed.html">gwr_mixed_2</a></td>
+<td>Mixed GWR</td></tr>
+<tr><td style="width: 25%;"><a href="gwr.mixed.html">gwr_mixed_trace</a></td>
+<td>Mixed GWR</td></tr>
+<tr><td style="width: 25%;"><a href="gwr.mixed.html">gwr_q</a></td>
+<td>Mixed GWR</td></tr>
 <tr><td style="width: 25%;"><a href="gwss.html">gwss</a></td>
 <td>Geographically weighted summary statistics (GWSS)</td></tr>
 <tr><td style="width: 25%;"><a href="gwss.montecarlo.html">gwss.montecarlo</a></td>
 <td>Monte Carlo (randomisation) test for gwss</td></tr>
+<tr><td style="width: 25%;"><a href="bw.gwr.html">gw_cv_all</a></td>
+<td>Bandwidth selection for basic GWR</td></tr>
+<tr><td style="width: 25%;"><a href="bw.gwr.html">gw_cv_all_cuda</a></td>
+<td>Bandwidth selection for basic GWR</td></tr>
+<tr><td style="width: 25%;"><a href="gwr.basic.html">gw_cv_all_omp</a></td>
+<td>Basic GWR model</td></tr>
+<tr><td style="width: 25%;"><a href="gw.dist.html">gw_dist</a></td>
+<td>Distance matrix calculation</td></tr>
+<tr><td style="width: 25%;"><a href="gwr.basic.html">gw_local_r2</a></td>
+<td>Basic GWR model</td></tr>
 <tr><td style="width: 25%;"><a href="gwr.basic.html">gw_reg</a></td>
 <td>Basic GWR model</td></tr>
+<tr><td style="width: 25%;"><a href="gwr.basic.html">gw_reg_1</a></td>
+<td>Basic GWR model</td></tr>
+<tr><td style="width: 25%;"><a href="gwr.basic.html">gw_reg_2</a></td>
+<td>Basic GWR model</td></tr>
+<tr><td style="width: 25%;"><a href="gwr.basic.html">gw_reg_all</a></td>
+<td>Basic GWR model</td></tr>
+<tr><td style="width: 25%;"><a href="gwr.basic.html">gw_reg_all_cuda</a></td>
+<td>Basic GWR model</td></tr>
+<tr><td style="width: 25%;"><a href="gwr.basic.html">gw_reg_all_omp</a></td>
+<td>Basic GWR model</td></tr>
+<tr><td style="width: 25%;"><a href="gw.weight.html">gw_weight</a></td>
+<td>Weight matrix calculation</td></tr>
+<tr><td style="width: 25%;"><a href="gw.weight.html">gw_weight_mat</a></td>
+<td>Weight matrix calculation</td></tr>
+<tr><td style="width: 25%;"><a href="gw.weight.html">gw_weight_vec</a></td>
+<td>Weight matrix calculation</td></tr>
 </table>
 
 <h2><a name="L">-- L --</a></h2>
@@ -366,22 +364,10 @@
 <h2><a name="M">-- M --</a></h2>
 
 <table width="100%">
-<tr><td style="width: 25%;"><a href="gw.dist.html">md_dist_mat</a></td>
-<td>Distance matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.dist.html">md_dist_smat</a></td>
-<td>Distance matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.dist.html">md_dist_vec</a></td>
-<td>Distance matrix calculation</td></tr>
 <tr><td style="width: 25%;"><a href="gwr.mink.approach.html">mink.approach</a></td>
 <td>Minkovski approach for GWR</td></tr>
 <tr><td style="width: 25%;"><a href="gwr.mink.matrixview.html">mink.matrixview</a></td>
 <td>Visualisation of the results from 'gwr.mink.approach'</td></tr>
-<tr><td style="width: 25%;"><a href="gw.dist.html">mk_dist_mat</a></td>
-<td>Distance matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.dist.html">mk_dist_smat</a></td>
-<td>Distance matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.dist.html">mk_dist_vec</a></td>
-<td>Distance matrix calculation</td></tr>
 <tr><td style="width: 25%;"><a href="gwr.model.selection.html">model.selection.gwr</a></td>
 <td>Model selection for GWR with a given set of independent variables</td></tr>
 <tr><td style="width: 25%;"><a href="gwr.model.sort.html">model.sort.gwr</a></td>
@@ -480,10 +466,8 @@
 <td>Geographically and Temporally Weighted Regression</td></tr>
 <tr><td style="width: 25%;"><a href="gtwr.html">ti.distv</a></td>
 <td>Geographically and Temporally Weighted Regression</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">tri_wt_mat</a></td>
-<td>Weight matrix calculation</td></tr>
-<tr><td style="width: 25%;"><a href="gw.weight.html">tri_wt_vec</a></td>
-<td>Weight matrix calculation</td></tr>
+<tr><td style="width: 25%;"><a href="gwr.basic.html">trhat2</a></td>
+<td>Basic GWR model</td></tr>
 </table>
 
 <h2><a name="U">-- U --</a></h2>

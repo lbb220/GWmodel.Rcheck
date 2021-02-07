@@ -2,15 +2,29 @@ pkgname <- "GWmodel"
 source(file.path(R.home("share"), "R", "examples-header.R"))
 options(warn = 1)
 options(pager = "console")
+base::assign(".ExTimings", "GWmodel-Ex.timings", pos = 'CheckExEnv')
+base::cat("name\tuser\tsystem\telapsed\n", file=base::get(".ExTimings", pos = 'CheckExEnv'))
+base::assign(".format_ptime",
+function(x) {
+  if(!is.na(x[4L])) x[1L] <- x[1L] + x[4L]
+  if(!is.na(x[5L])) x[2L] <- x[2L] + x[5L]
+  options(OutDec = '.')
+  format(x[1L:3L], digits = 7L)
+},
+pos = 'CheckExEnv')
+
+### * </HEADER>
 library('GWmodel')
 
 base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
 cleanEx()
 nameEx("DubVoter")
 ### * DubVoter
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: DubVoter
 ### Title: Voter turnout data in Greater Dublin(SpatialPolygonsDataFrame)
 ### Aliases: DubVoter Dub.voter
@@ -27,30 +41,15 @@ ls()
 
 
 
-cleanEx()
-nameEx("EN_CB")
-### * EN_CB
-
-flush(stderr()); flush(stdout())
-
-### Name: EN_CB
-### Title: England county boundaries
-### Aliases: cty_eng
-### Keywords: data
-
-### ** Examples
-
-data(EN_CB)
-ls()
-
-
-
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("DubVoter", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("EWHP")
 ### * EWHP
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: EWHP
 ### Title: House price data set (DataFrame) in England and Wales
 ### Aliases: EWHP ewhp
@@ -69,30 +68,15 @@ plot(houses.spdf, add = TRUE, pch = 16)
 
 
 
-cleanEx()
-nameEx("GE2015")
-### * GE2015
-
-flush(stderr()); flush(stdout())
-
-### Name: GE2015
-### Title: General Election outcome data at constituency level in England
-### Aliases: ge2015
-### Keywords: data
-
-### ** Examples
-
-data(GE2015)
-ls()
-
-
-
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("EWHP", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("Georgia")
 ### * Georgia
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: Georgia
 ### Title: Georgia census data set (csv file)
 ### Aliases: Georgia Gedu.df
@@ -108,12 +92,15 @@ spplot(educ.spdf, names(educ.spdf)[4:10])
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("Georgia", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("GeorgiaCounties")
 ### * GeorgiaCounties
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: GeorgiaCounties
 ### Title: Georgia counties data (SpatialPolygonsDataFrame)
 ### Aliases: Gedu.counties
@@ -131,12 +118,15 @@ plot(educ.spdf, add=TRUE)
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("GeorgiaCounties", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("LondonHP")
 ### * LondonHP
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: LondonHP
 ### Title: London house price data set (SpatialPointsDataFrame)
 ### Aliases: LondonHP londonhp
@@ -152,12 +142,15 @@ plot(londonhp, add=TRUE)
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("LondonHP", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("USelect")
 ### * USelect
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: USelect
 ### Title: Results of the 2004 US presidential election at the county level
 ###   (SpatialPolygonsDataFrame)
@@ -172,12 +165,15 @@ ls()
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("USelect", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("ggwr.basic")
 ### * ggwr.basic
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: ggwr.basic
 ### Title: Generalised GWR models with Poisson and Binomial options
 ### Aliases: ggwr.basic gwr.generalised gwr.binomial gwr.binomial.wt
@@ -198,17 +194,18 @@ data(LondonHP)
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("ggwr.basic", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gw.dist")
 ### * gw.dist
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gw.dist
 ### Title: Distance matrix calculation
-### Aliases: gw.dist coordinate_rotate eu_dist_mat eu_dist_smat eu_dist_vec
-###   mk_dist_mat mk_dist_smat mk_dist_vec cd_dist_mat cd_dist_smat
-###   cd_dist_vec md_dist_mat md_dist_smat md_dist_vec
+### Aliases: gw.dist gw_dist
 ### Keywords: GW tools
 
 ### ** Examples
@@ -240,12 +237,15 @@ dist.m4<-gw.dist(dp.locat=dp,rp.locat=rp, p=0.75,theta=0.8)
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gw.dist", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwda")
 ### * gwda
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwda
 ### Title: GW Discriminant Analysis
 ### Aliases: gwda print.gwda grouping.xy wqda wlda splitx wmean wvarcov
@@ -255,28 +255,28 @@ flush(stderr()); flush(stdout())
 ### ** Examples
 
 ## Not run: 
-##D  require(tmap)
-##D  data(ge2015)
-##D  data(cty_eng)
-##D  ge2015 <- ge2015[ge2015$WINNER ##D 
-##D  dMat <- gw.dist(coordinates(ge2015))
-##D  bw <- bw.gwda(WINNER~Age65over+OwnOcc+NoQual+Unemp+NonWhite+LoneParHH,data=ge2015,
+##D  data(USelect)
+##D  dMat <- gw.dist(coordinates(USelect2004))
+##D  bw <- bw.gwda(winner~unemploy+pctcoled+PEROVER65+pcturban+WHITE,data=USelect2004,
 ##D  adaptive=TRUE,dMat=dMat)
-##D  ge.gwda <- gwda(WINNER~Age65over+OwnOcc+NoQual+Unemp+NonWhite+LoneParHH,data=ge2015,
+##D  ge.gwda <- gwda(winner~unemploy+pctcoled+PEROVER65+pcturban+WHITE,data=USelect2004,
 ##D  bw=bw,adaptive=TRUE,dMat=dMat)
-##D  table(ge2015$WINNER,ge.gwda$SDF$group.predicted)
-##D  tm_shape(ge.gwda$SDF)+tm_fill("entropy")+tm_shape(cty_eng)+tm_borders()
+##D  table(USelect2004$winner,ge.gwda$SDF$group.predicted)
+##D  spplot(ge.gwda$SDF, "entropy")
 ##D  
 ## End(Not run)
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwda", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwpca")
 ### * gwpca
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwpca
 ### Title: GWPCA
 ### Aliases: gwpca robustSvd rwpca wpca wt.median print.gwpca
@@ -352,12 +352,15 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwpca", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwpca.montecarlo.1")
 ### * gwpca.montecarlo.1
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwpca.montecarlo.1
 ### Title: Monte Carlo (randomisation) test for significance of GWPCA
 ###   eigenvalue variability for the first component only - option 1
@@ -377,12 +380,15 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwpca.montecarlo.1", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwpca.montecarlo.2")
 ### * gwpca.montecarlo.2
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwpca.montecarlo.2
 ### Title: Monte Carlo (randomisation) test for significance of GWPCA
 ###   eigenvalue variability for the first component only - option 2
@@ -402,15 +408,20 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwpca.montecarlo.2", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwr.basic")
 ### * gwr.basic
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwr.basic
 ### Title: Basic GWR model
-### Aliases: gwr.basic gw_reg gwr_diag Ci_mat F1234.test print.gwrm
+### Aliases: gwr.basic gw_reg gwr_diag Ci_mat gw_local_r2 gw_reg_1 gw_reg_2
+###   gw_reg_all gw_reg_all_cuda gw_cv_all_omp gw_reg_all_omp trhat2
+###   F1234.test print.gwrm
 ### Keywords: GWR
 
 ### ** Examples
@@ -459,15 +470,68 @@ scale = 500, col=1)
 ##D   main="GWR estimated coefficients for FLOORSZ with an adaptive bandwidth", 
 ##D   col.regions=mypalette, sp.layout=list(nsa,londonborough))}
 ## End(Not run)
+## Not run: 
+##D   ############HP-GWR test code
+##D   simulate.data.generator <- function(data.length) {
+##D   x1 <- rnorm(data.length)
+##D   x2 <- rnorm(data.length)
+##D   x3 <- rnorm(data.length)
+##D   lon <- rnorm(data.length, mean = 533200, sd = 10000)
+##D   lat <- rnorm(data.length, mean = 159400, sd = 10000)
+##D   y <- x1 + 5 * x2 + 2.5 * x3 + rnorm(data.length)
+##D   simulate.data <- data.frame(y = y, x1 = x1, x2 = x2, x3 = x3, lon = lon, lat = lat)
+##D   coordinates(simulate.data) <- ~ lon + lat
+##D   names(simulate.data)
+##D   return(simulate.data)
+##D }
+##D simulate.data <- simulate.data.generator(10000)
+##D adaptive = TRUE
+##D 
+##D ## GWR (not parallelized)
+##D bw.CV.s <- bw.gwr(data = simulate.data, formula = y ~ x1 + x2 + x3, approach="CV", 
+##D                   kernel = "gaussian", adaptive = adaptive, parallel.method = FALSE)
+##D model.s <- gwr.model.selection(DeVar = "y", InDeVars = c("x1", "x2", "x3"), data = simulate.data, 
+##D                               bw = bw.CV.s, approach="AIC", kernel = "gaussian", adaptive = T, 
+##D                               parallel.method = FALSE)
+##D system.time(
+##D   betas.s <- gwr.basic(data = simulate.data, formula = y ~ x1 + x2 + x3, bw = bw.CV.s, 
+##D                        kernel = "gaussian", adaptive = TRUE)
+##D )
+##D 
+##D ## GWR-Omp
+##D bw.CV.omp <- bw.gwr(data = simulate.data, formula = y ~ x1 + x2 + x3, approach="CV", 
+##D                     kernel = "gaussian", adaptive = adaptive, parallel.method = "omp")
+##D model.omp <- gwr.model.selection(DeVar = "y", InDeVars = c("x1", "x2", "x3"), data = simulate.data, 
+##D                                 bw = bw.CV.omp, approach="AIC", kernel = "gaussian", adaptive = T, 
+##D                                 parallel.method = "omp")
+##D system.time(
+##D   betas.omp <- gwr.basic(data = simulate.data, formula = y ~ x1 + x2 + x3, bw = bw.CV.omp, 
+##D                         kernel = "gaussian", adaptive = T, parallel.method = "omp"))
+##D 
+##D ## GWR-CUDA
+##D bw.CV.cuda <- bw.gwr(data = simulate.data, formula = y ~ x1 + x2 + x3, approach="CV", 
+##D                      kernel = "gaussian", adaptive = adaptive, parallel.method = "cuda", 
+##D                      parallel.arg = 6*16)
+##D model.cuda <- gwr.model.selection(DeVar = "y", InDeVars = c("x1", "x2", "x3"), data = simulate.data, 
+##D                                  bw = bw.CV.cuda, approach="AIC", kernel = "gaussian", adaptive = T, 
+##D                                  parallel.method = "cuda", parallel.arg = 6*16)
+##D system.time(
+##D   betas.cuda <- gwr.basic(data = simulate.data, formula = y ~ x1 + x2 + x3, bw = bw.CV.cuda, 
+##D                           kernel = "gaussian", adaptive = T, parallel.method = "cuda", 
+##D                           parallel.arg = 6*8))
+## End(Not run)
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwr.basic", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwr.bootstrap")
 ### * gwr.bootstrap
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwr.bootstrap
 ### Title: Bootstrap GWR
 ### Aliases: gwr.bootstrap print.gwrbsm generate.lm.data parametric.bs
@@ -555,12 +619,15 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwr.bootstrap", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwr.lcr")
 ### * gwr.lcr
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwr.lcr
 ### Title: GWR with a locally-compensated ridge term
 ### Aliases: gwr.lcr ridge.lm print.gwrlcr
@@ -605,12 +672,15 @@ CN.global
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwr.lcr", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwr.model.view")
 ### * gwr.model.view
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwr.model.view
 ### Title: Visualise the GWR models from 'gwr.model.selection'
 ### Aliases: gwr.model.view model.view.gwr
@@ -631,12 +701,15 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwr.model.view", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwr.montecarlo")
 ### * gwr.montecarlo
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwr.montecarlo
 ### Title: Monte Carlo (randomisation) test for significance of GWR
 ###   parameter variability
@@ -658,12 +731,15 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwr.montecarlo", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwr.multiscale")
 ### * gwr.multiscale
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwr.multiscale
 ### Title: Multiscale GWR
 ### Aliases: gwr.multiscale gwr.q2 print.multiscalegwr gwr.backfit
@@ -690,12 +766,15 @@ EUDM <- gw.dist(coordinates(londonhp))
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwr.multiscale", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwr.predict")
 ### * gwr.predict
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwr.predict
 ### Title: GWR used as a spatial predictor
 ### Aliases: gwr.predict gw.reg1 print.gwrm.pred
@@ -721,12 +800,15 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwr.predict", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwr.robust")
 ### * gwr.robust
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwr.robust
 ### Title: Robust GWR model
 ### Aliases: gwr.robust
@@ -771,12 +853,15 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwr.robust", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwr.scalable")
 ### * gwr.scalable
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwr.scalable
 ### Title: Scalable GWR
 ### Aliases: gwr.scalable scgwr_pre scgwr_loocv scgwr_reg AICc1
@@ -796,12 +881,15 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwr.scalable", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwss")
 ### * gwss
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwss
 ### Title: Geographically weighted summary statistics (GWSS)
 ### Aliases: gwss local.corr print.gwss
@@ -853,12 +941,15 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwss", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("gwss.montecarlo")
 ### * gwss.montecarlo
 
 flush(stderr()); flush(stdout())
 
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: gwss.montecarlo
 ### Title: Monte Carlo (randomisation) test for gwss
 ### Aliases: gwss.montecarlo montecarlo.gwss
@@ -876,8 +967,11 @@ flush(stderr()); flush(stdout())
 
 
 
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("gwss.montecarlo", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 ### * <FOOTER>
 ###
+cleanEx()
 options(digits = 7L)
 base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
 grDevices::dev.off()

@@ -1,10 +1,13 @@
-* using log directory 'C://GWmodel.Rcheck'
-* using R version 3.3.2 (2016-10-31)
+* using log directory 'D://GWmodel.Rcheck'
+* using R version 4.0.2 (2020-06-22)
 * using platform: x86_64-w64-mingw32 (64-bit)
 * using session charset: CP936
+* using option '--as-cran'
 * checking for file 'GWmodel/DESCRIPTION' ... OK
 * checking extension type ... Package
-* this is package 'GWmodel' version '2.1-4'
+* this is package 'GWmodel' version '2.2-3'
+* checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
+Maintainer: 'Binbin Lu <binbinlu@whu.edu.cn>'
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -12,13 +15,15 @@
 * checking for executable files ... OK
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
+* checking serialization versions ... OK
 * checking whether package 'GWmodel' can be installed ... OK
 * checking installed package size ... NOTE
-  installed size is  6.2Mb
+  installed size is  5.1Mb
   sub-directories of 1Mb or more:
-    data   3.9Mb
-    libs   1.8Mb
+    data   1.5Mb
+    libs   2.8Mb
 * checking package directory ... OK
+* checking for future file timestamps ... OK
 * checking DESCRIPTION meta-information ... OK
 * checking top-level files ... OK
 * checking for left-over files ... OK
@@ -32,12 +37,14 @@
 ** checking whether the package can be unloaded cleanly ... OK
 ** checking whether the namespace can be loaded with stated dependencies ... OK
 ** checking whether the namespace can be unloaded cleanly ... OK
+** checking use of S3 registration ... OK
 * loading checks for arch 'x64'
 ** checking whether the package can be loaded ... OK
 ** checking whether the package can be loaded with stated dependencies ... OK
 ** checking whether the package can be unloaded cleanly ... OK
 ** checking whether the namespace can be loaded with stated dependencies ... OK
 ** checking whether the namespace can be unloaded cleanly ... OK
+** checking use of S3 registration ... OK
 * checking dependencies in R code ... OK
 * checking S3 generic/method consistency ... OK
 * checking replacement functions ... OK
@@ -45,6 +52,7 @@
 * checking R code for possible problems ... OK
 * checking Rd files ... OK
 * checking Rd metadata ... OK
+* checking Rd line widths ... OK
 * checking Rd cross-references ... OK
 * checking for missing documentation entries ... OK
 * checking for code/documentation mismatches ... OK
@@ -54,15 +62,41 @@
 * checking contents of 'data' directory ... OK
 * checking data for non-ASCII characters ... OK
 * checking data for ASCII and uncompressed saves ... OK
+* checking line endings in shell scripts ... OK
 * checking line endings in C/C++/Fortran sources/headers ... OK
 * checking line endings in Makefiles ... OK
 * checking compilation flags in Makevars ... OK
 * checking for GNU extensions in Makefiles ... OK
 * checking for portable use of $(BLAS_LIBS) and $(LAPACK_LIBS) ... OK
-* checking compiled code ... OK
+* checking use of PKG_*FLAGS in Makefiles ... OK
+* checking use of SHLIB_OPENMP_*FLAGS in Makefiles ... OK
+* checking pragmas in C/C++ headers and code ... OK
+* checking compilation flags used ... OK
+* checking compiled code ... NOTE
+Note: information on .o files for i386 is not available
+Note: information on .o files for x64 is not available
+File 'D://GWmodel.Rcheck/GWmodel/libs/i386/GWmodel.dll':
+  Found '_exit', possibly from '_exit' (C)
+  Found 'abort', possibly from 'abort' (C), 'runtime' (Fortran)
+  Found 'exit', possibly from 'exit' (C), 'stop' (Fortran)
+  Found 'printf', possibly from 'printf' (C)
+File 'D://GWmodel.Rcheck/GWmodel/libs/x64/GWmodel.dll':
+  Found '_exit', possibly from '_exit' (C)
+  Found 'abort', possibly from 'abort' (C), 'runtime' (Fortran)
+  Found 'exit', possibly from 'exit' (C), 'stop' (Fortran)
+  Found 'printf', possibly from 'printf' (C)
+
+Compiled code should not call entry points which might terminate R nor
+write to stdout/stderr instead of to the console, nor use Fortran I/O
+nor system RNGs. The detected symbols are linked into the code but
+might come from libraries and not actually be called.
+
+See 'Writing portable packages' in the 'Writing R Extensions' manual.
 * checking examples ...
 ** running examples for arch 'i386' ... OK
 ** running examples for arch 'x64' ... OK
 * checking PDF version of manual ... OK
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
 * DONE
-Status: 1 NOTE
+Status: 2 NOTEs

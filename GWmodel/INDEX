@@ -22,10 +22,7 @@ bw.gwr                  Bandwidth selection for basic GWR
 bw.gwr.lcr              Bandwidth selection for locally compensated
                         ridge GWR (GWR-LCR)
 bw.gwss.average         Bandwidth selection for GW summary averages
-cty_eng                 England county boundaries
 ewoutline               Outline of England and Wales for data EWHP
-ge2015                  General Election outcome data at constituency
-                        level in England
 ggwr.basic              Generalised GWR models with Poisson and
                         Binomial options
 ggwr.cv                 Cross-validation score for a specified
